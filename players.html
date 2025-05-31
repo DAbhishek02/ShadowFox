@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Team Players</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+    .players-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .player-card {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: 220px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .player-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Team Players</h1>
+
+  <div id="player-list" class="players-container"></div>
+
+  <script>
+    const players = [
+      {
+        name: "Virat Kohli",
+        image: "images/virat_kohli.png",
+        profilePage: "https://en.wikipedia.org/wiki/Virat_Kohli"
+      },
+      {
+        name: "MS Dhoni",
+        image: "images/ms_dhoni.jpg",
+        profilePage: "https://en.wikipedia.org/wiki/MS_Dhoni"
+      },
+      {
+        name: "Rohit Sharma",
+        image: "images/rohit_sharma.jpg",
+        profilePage: "https://en.wikipedia.org/wiki/Rohit_Sharma"
+      },
+      {
+        name: "Hardik Pandya",
+        image: "images/hardik_pandya.jpg",
+        profilePage: "https://en.wikipedia.org/wiki/Hardik_Pandya"
+      },
+      {
+        name: "KL Rahul",
+        image: "images/kl_rahul.jpg",
+        profilePage: "https://en.wikipedia.org/wiki/KL_Rahul"
+      },
+      {
+        name: "Rashid Khan",
+        image: "images/rashid_khan.jpg",
+        profilePage: "https://en.wikipedia.org/wiki/Rashid_Khan_(cricketer)"
+      },
+      {
+        name: "Shubman Gill",
+        image: "images/shubman_gill.jpg",
+        profilePage: "https://en.wikipedia.org/wiki/Shubman_Gill"
+      },
+      {
+        name: "Sanju Samson",
+        image: "images/sanju_samson.jpg",
+        profilePage: "https://en.wikipedia.org/wiki/Sanju_Samson"
+      },
+      {
+        name: "Andre Russell",
+        image: "images/andre_russell.jpg",
+        profilePage: "https://en.wikipedia.org/wiki/Andre_Russell"
+      },
+      {
+        name: "Faf du Plessis",
+        image: "images/faf_du_plessis.jpg",
+        profilePage: "https://en.wikipedia.org/wiki/Faf_du_Plessis"
+      },
+      {
+        name: "Sunil Narine",
+        image: "images/sunil_narine.jpg",
+        profilePage: "https://en.wikipedia.org/wiki/Sunil_Narine"
+      },
+      {
+        name: "Suryakumar Yadav",
+        image: "images/suryakumar_yadav.jpg",
+        profilePage: "https://en.wikipedia.org/wiki/Suryakumar_Yadav"
+      },
+      {
+        name: "Ruturaj Gaikwad",
+        image: "images/ruturaj_gaikwad.jpg",
+        profilePage: "https://en.wikipedia.org/wiki/Ruturaj_Gaikwad"
+      },
+
+      {
+        name: "Jos Buttler",
+        image: "images/jos_buttler.jpg",
+        profilePage: "https://en.wikipedia.org/wiki/Jos_Buttler"
+      },
+      {
+        name: "Glenn Maxwell",
+        image: "images/glenn_maxwell.jpg",
+        profilePage: "https://en.wikipedia.org/wiki/Glenn_Maxwell"
+      },
+      {
+        name: "Bhuvneshwar Kumar",
+        image: "images/bhuvneshwar_kumar.jpg",
+        profilePage: "https://en.wikipedia.org/wiki/Bhuvneshwar_Kumar"
+      },
+      {
+        name: "Mohammed Shami",
+        image: "images/mohammed_shami.jpg",
+        profilePage: "https://en.wikipedia.org/wiki/Mohammed_Shami"
+      }
+    ];
+
+    const container = document.getElementById("player-list");
+    players.forEach(player => {
+      const card = document.createElement("div");
+      card.className = "player-card";
+      card.innerHTML = `
+        <img src="${player.image}" alt="${player.name}" class="player-img" onerror="this.onerror=null;this.src='images/default_player.png';"><br>
+        <h2>${player.name}</h2>
+        <a href="${player.profilePage}" target="_blank">Read More</a>
+      `;
+      container.appendChild(card);
+    });
+  </script>
+</body>
+</html>

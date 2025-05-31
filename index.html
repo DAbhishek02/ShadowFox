@@ -1,72 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>IPL Team - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #0ff;
+    }
+    main {
+      padding: 20px;
+    }
+    #team-details, #upcoming-matches {
+      margin-top: 20px;
+    }
+    .team-card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .team-card img {
+      width: 120px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>Hi, I'm Dudikikar Abhishek</h1>
-    <p>Web Developer | Designer | Coder</p>
+    <h1>Welcome to Your IPL Team</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="players.html">Players</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="stats.html">Stats</a>
+      <a href="news.html">News</a>
+      <a href="fans.html">Fans</a>
+      <a href="about.html">About</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#resume">Resume</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <main>
+    <section style="text-align:center; margin-bottom:40px;">
+      <h2>Select IPL Team</h2>
+      <select id="team-selector">
+        <center>
+        <option value="">-- Choose a team --</option>
+        <option value="CSK">Chennai Super Kings</option>
+        <option value="RCB">Royal Challengers Bangalore</option>
+        <option value="RR">Rajasthan Royals</option>
+        <option value="DC">Delhi Capitals</option>
+        <option value="MI">Mumbai Indians</option>
+        <option value="PBKS">Punjab Kings</option>
+        <option value="GT">Gujarat Titans</option>
+        <option value="SRH">Sunrisers Hyderabad</option>
+        <option value="LSG">Lucknow Super Giants</option>
+        <option value="KKR">Kolkata Knight Riders</option>
+      </center>
+      </select>
+      <div id="team-details"></div>
+    </section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a passionate web developer eager to create beautiful and functional websites. Welcome to my portfolio!</p>
-  </section>
+    <section style="text-align:center;">
+      <h2>Upcoming & Live Matches</h2>
+      <div id="upcoming-matches"></div>
+      <div style="margin-top:24px;">
+        <a href="https://www.jiocinema.com/sports/ipl" target="_blank" style="background:#d32f2f;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:bold;box-shadow:0 2px 8px rgba(0,0,0,0.10);">Watch IPL Live Now</a>
+      </div>
+    </section>
+  </main>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript (Basic)</li>
-    </ul>
-  </section>
+  <script>
+    const teamData = {
+      "CSK": {
+        name: "Chennai Super Kings",
+        captain: "MS Dhoni",
+        coach: "Stephen Fleming",
+        homeGround: "MA Chidambaram Stadium",
+        logo: "csk.png",
+        titles: 5
+      },
+      "RCB": {
+        name: "Royal Challengers Bangalore",
+        captain: "Rajat Patidar",
+        coach: "Andy Flower",
+        homeGround: "M. Chinnaswamy Stadium",
+        logo: "rcb.png",
+        titles: 0
+      },
+      "RR": {
+        name: "Rajasthan Royals",
+        captain: "Sanju Samson",
+        coach: "Rahul Dravid",
+        homeGround: "Sawai Mansingh Stadium",
+        logo: "rr.png",
+        titles: 1
+      },
+      "DC": {
+        name: "Delhi Capitals",
+        captain: "F.du Plessis",
+        coach: "Hemang Badani",
+        homeGround: "Arun Jaitley Stadium",
+        logo: "dc.png",
+        titles: 0
+      },
+      "MI": {
+        name: "Mumbai Indians",
+        captain: "Hardik Pandya",
+        coach: "Mahela Jayawardene",
+        homeGround: "Wankhede Stadium",
+        logo: "mi.png",
+        titles: 5
+      },
+      "PBKS": {
+        name: "Punjab Kings",
+        captain: "Shreyas Lyer",
+        coach: "Ricky Ponting",
+        homeGround: "Maharaja Yadavindra Singh Stadium",
+        logo: "pbks.png",
+        titles: 0
+      },
+      "GT": {
+        name: "Gujarat Titans",
+        captain: "Shubman Gill",
+        coach: "Ashish Nehra",
+        homeGround: "Narendra Modi Stadium",
+        logo: "gt.png",
+        titles: 1
+      },
+      "SRH": {
+        name: "Sunrisers Hyderabad",
+        captain: "Pat Cummins",
+        coach: "Daniel Vettori",
+        homeGround: "Rajiv Gandhi Intl. Stadium",
+        logo: "srh.png",
+        titles: 1
+      },
+      "LSG": {
+        name: "Lucknow Super Giants",
+        captain: "Rishabh Pant",
+        coach: "Justin Langer",
+        homeGround: "BRSABV Ekana Stadium",
+        logo: "lsg.png",
+        titles: 0
+      },
+      "KKR": {
+        name: "Kolkata Knight Riders",
+        captain: "Ajinkya Rahane",
+        coach: "Chandrakant Pandit",
+        homeGround: "Eden Gardens",
+        logo: "kkr.png",
+        titles: 2
+      }
+    };
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Project 1</h3>
-      <p>
-	Eye blink detection: IR sensor-based eye blink detection can prevent drowsiness-related accidents by alerting drivers to prolonged eye closure. This technology also aids paralysis patients and railway engine drivers.
-</p>
-    </div>
-    <div class="project">
-      <h3>Project 2</h3>
-      <p>FLOOR CLEANING ROBOT WITH VOICE ASSISTANT Voice-controlled floor cleaning robots offer convenient, hands-free vacuuming and mopping via integration with Google Assistant and Alexa.</p>
-    </div>
-  </section>
+    document.getElementById("team-selector").addEventListener("change", function() {
+      const value = this.value;
+      const details = document.getElementById("team-details");
+      if (teamData[value]) {
+        const team = teamData[value];
+        details.innerHTML = `
+          <div class="team-card">
+            <img src="images/${team.logo}" alt="${team.name}">
+            <h3>${team.name}</h3>
+            <p><strong>Captain:</strong> ${team.captain}</p>
+            <p><strong>Coach:</strong> ${team.coach}</p>
+            <p><strong>Home Ground:</strong> ${team.homeGround}</p>
+            <p><strong>IPL Titles:</strong> ${team.titles}</p>
+            <div id="team-matches"></div>
+          </div>
+        `;
+        // Fetch and show all matches for this team
+        fetch("data/matches.json")
+          .then(res => res.json())
+          .then(matches => {
+            const matchList = matches.filter(m => m.team1 === team.name || m.team2 === team.name);
+            let html = `<h4 style='margin-top:18px;'>All Matches</h4><ul style='padding-left:0;'>`;
+            matchList.forEach(match => {
+              html += `<li style='list-style:none;margin-bottom:10px;background:#f8f8f8;padding:10px 8px;border-radius:7px;'>
+                <strong>${match.date}</strong>: ${match.team1} vs ${match.team2} at ${match.venue} — ${match.time}
+                <br><a href='https://www.jiocinema.com/sports/ipl' target='_blank' style='color:#1976d2;font-weight:bold;'>Watch Live</a>
+              </li>`;
+            });
+            html += `</ul>`;
+            document.getElementById("team-matches").innerHTML = html;
+          });
+      } else {
+        details.innerHTML = "";
+      }
+    });
 
-  <section id="resume">
-    <h2>Resume</h2>
-    <a href="resume.pdf" download>Download My Resume (PDF)</a>
-  </section>
+    // Fetch and display real matches from matches.json
+    fetch("data/matches.json")
+      .then(res => res.json())
+      .then(matches => {
+        const container = document.getElementById("upcoming-matches");
+        container.innerHTML = '';
+        const today = new Date();
+        let shown = 0;
+        matches.forEach(match => {
+          const matchDate = new Date(match.date);
+          // Show matches from today and next 4
+          if (matchDate >= today && shown < 5) {
+            container.innerHTML += `
+              <div style="background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.08);margin:12px auto;padding:16px;max-width:500px;">
+                <strong>${match.date}</strong>: ${match.team1} vs ${match.team2} at ${match.venue} — ${match.time}
+                <br>
+                <a href="https://www.jiocinema.com/sports/ipl" target="_blank" style="color:#1976d2;font-weight:bold;">Watch Live</a>
+              </div>
+            `;
+            shown++;
+          }
+        });
+        if (shown === 0) {
+          container.innerHTML = '<div style="color:#d32f2f;font-weight:bold;">No upcoming matches at the moment.</div>';
+        }
+      });
+  </script>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>© 2025 [Your Name]. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>

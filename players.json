@@ -1,0 +1,146 @@
+[
+  {
+    "name": "Virat Kohli",
+    "role": "Batsman",
+    "age": 35,
+    "image": "images/virat-kohli.png",
+    "battingAverage": 52.7,
+    "totalRuns": 6700
+  },
+  {
+    "name": "Mohammed Siraj",
+    "role": "Bowler",
+    "age": 29,
+    "image": "images/siraj.png",
+    "wickets": 97
+  },
+  {
+    "name": "MS Dhoni",
+    "role": "Wicketkeeper-Batsman",
+    "age": 43,
+    "image": "images/ms_dhoni.jpg",
+    "battingAverage": 39.1,
+    "totalRuns": 5082
+  },
+  {
+    "name": "Rohit Sharma",
+    "role": "Batsman",
+    "age": 38,
+    "image": "images/rohit_sharma.jpg",
+    "battingAverage": 31.5,
+    "totalRuns": 6211
+  },
+  {
+    "name": "Hardik Pandya",
+    "role": "All-rounder",
+    "age": 31,
+    "image": "images/hardik_pandya.jpg",
+    "battingAverage": 29.9,
+    "totalRuns": 2300,
+    "wickets": 53
+  },
+  {
+    "name": "KL Rahul",
+    "role": "Batsman",
+    "age": 33,
+    "image": "images/kl_rahul.jpg",
+    "battingAverage": 46.2,
+    "totalRuns": 4163
+  },
+  {
+    "name": "Rashid Khan",
+    "role": "Bowler",
+    "age": 26,
+    "image": "images/rashid_khan.jpg",
+    "wickets": 139
+  },
+  {
+    "name": "Shubman Gill",
+    "role": "Batsman",
+    "age": 25,
+    "image": "images/shubman_gill.jpg",
+    "battingAverage": 38.7,
+    "totalRuns": 2790
+  },
+  {
+    "name": "Sanju Samson",
+    "role": "Wicketkeeper-Batsman",
+    "age": 30,
+    "image": "images/sanju_samson.jpg",
+    "battingAverage": 29.2,
+    "totalRuns": 3888
+  },
+  {
+    "name": "Andre Russell",
+    "role": "All-rounder",
+    "age": 36,
+    "image": "images/andre_russell.jpg",
+    "battingAverage": 29.0,
+    "totalRuns": 2262,
+    "wickets": 102
+  },
+  {
+    "name": "Faf du Plessis",
+    "role": "Batsman",
+    "age": 40,
+    "image": "images/faf_du_plessis.jpg",
+    "battingAverage": 36.9,
+    "totalRuns": 4133
+  },
+  {
+    "name": "Sunil Narine",
+    "role": "All-rounder",
+    "age": 36,
+    "image": "images/sunil_narine.jpg",
+    "battingAverage": 17.5,
+    "totalRuns": 1046,
+    "wickets": 163
+  },
+  {
+    "name": "Suryakumar Yadav",
+    "role": "Batsman",
+    "age": 34,
+    "image": "images/suryakumar_yadav.jpg",
+    "battingAverage": 32.0,
+    "totalRuns": 3249
+  },
+  {
+    "name": "Ruturaj Gaikwad",
+    "role": "Batsman",
+    "age": 28,
+    "image": "images/ruturaj_gaikwad.jpg",
+    "battingAverage": 39.5,
+    "totalRuns": 1797
+  },
+  {
+    "name": "Jos Buttler",
+    "role": "Wicketkeeper-Batsman",
+    "age": 34,
+    "image": "images/jos_buttler.jpg",
+    "battingAverage": 39.7,
+    "totalRuns": 3223
+  },
+  {
+    "name": "Glenn Maxwell",
+    "role": "All-rounder",
+    "age": 36,
+    "image": "images/glenn_maxwell.jpg",
+    "battingAverage": 26.5,
+    "totalRuns": 2719,
+    "wickets": 37
+  },
+  {
+    "name": "Bhuvneshwar Kumar",
+    "role": "Bowler",
+    "age": 35,
+    "image": "images/bhuvneshwar_kumar.jpg",
+    "wickets": 170
+  },
+  {
+    "name": "Mohammed Shami",
+    "role": "Bowler",
+    "age": 35,
+    "image": "images/mohammed_shami.jpg",
+    "wickets": 127
+  }
+]
